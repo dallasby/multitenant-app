@@ -12,3 +12,18 @@ applications:
       JBP_CONFIG_SAP_MACHINE_JDK : "{ version: 21.+ }"
     services:
       - javauaa
+  - name: web
+    random-route: true
+    path: web
+    memory: 1024M
+    env:
+      destinations: >
+        [
+          {
+            "name":"multitenant-app",
+            "url":"https://multitenant-app-stellar-bear-sj.cfapps.us10-001.hana.ondemand.com/",
+            "forwardAuthToken": true
+          }
+        ]
+    services:
+      - javauaa

@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "source": "^/multitenant-app/(.*)$",
+      "target": "$1",
+      "destination": "multitenant-app"
+    }
+  ]
+}
