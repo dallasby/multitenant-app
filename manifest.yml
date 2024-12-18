@@ -1,0 +1,12 @@
+---
+applications:
+  - name: multitenant-app
+    random-route: true
+    path: ./target/java-tutorial-0.0.1-SNAPSHOT.jar
+    memory: 1024M
+    buildpacks:
+      - sap_java_buildpack_jakarta
+    env:
+      TARGET_RUNTIME: tomcat
+      JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
+      JBP_CONFIG_SAP_MACHINE_JDK : "{ version: 21.+ }"

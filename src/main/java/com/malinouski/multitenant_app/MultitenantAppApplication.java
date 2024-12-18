@@ -8,6 +8,7 @@ public class MultitenantAppApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MultitenantAppApplication.class, args);
+        System.out.println("Application successfully started!");
     }
 
 }
