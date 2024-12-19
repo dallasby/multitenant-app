@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: multitenant-app
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5433/my_db
+    username: postgres
+    password: postgres
