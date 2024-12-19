@@ -1,10 +1,21 @@
 {
   "xsappname": "multitenant-app",
-  "tenant-mode": "dedicated",
+  "tenant-mode": "shared",
   "scopes": [
     {
       "name": "$XSAPPNAME.Display",
       "description": "Display content"
+    },
+    {
+      "name": "$XSAPPNAME.read",
+      "description": "With this scope, USER can read products."
+    },
+    {
+      "name": "$XSAPPNAME.Callback",
+      "description": "With this scope set, the callbacks for tenant onboarding, offboarding and getDependencies can be called.",
+      "grant-as-authority-to-apps": [
+        "$XSAPPNAME(application,sap-provisioning,tenant-onboarding)"
+      ]
     }
   ],
   "role-templates": [

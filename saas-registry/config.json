@@ -1,0 +1,9 @@
+{
+  "xsappname": "multitenant-app",
+  "appUrls": {
+    "onSubscription": "https://multitenant-app-stellar-bear-sj.cfapps.us10-001.hana.ondemand.com/api/v1/callback/tenant/{tenantId}"
+  },
+  "displayName": "Multitenant App MTA",
+  "description": "Multitenant App MTA sample application",
+  "category": "Custom SaaS Applications"
+}
