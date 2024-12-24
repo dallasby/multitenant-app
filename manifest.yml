@@ -9,7 +9,7 @@ applications:
     env:
       TARGET_RUNTIME: tomcat
       JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
-      JBP_CONFIG_SAP_MACHINE_JDK : "{ version: 21.+ }"
+      JBP_CONFIG_SAP_MACHINE_JDK: "{ version: 21.+ }"
     services:
       - javauaa
       - my_db

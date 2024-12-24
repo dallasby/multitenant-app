@@ -1,0 +1,10 @@
+spring:
+  #  datasource:
+  #    url: jdbc:postgresql://${vcap.service.postgresql-db[0].credentials.hostname}:${vcap.service.postgresql-db[0].credentials.port}/${vcap.services.postgresql-db[0].credentials.dbname}
+  #    username: ${vcap.service.postgresql-db[0].credentials.username}
+  #    password: ${vcap.service.postgresql-db[0].credentials.password}
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: 5e683d776e54
+    password: cc630ca1f4df4d501b1
+    url: jdbc:postgresql://postgres-e9277334-e7a6-415f-a8fc-27f403a5314f.cqryblsdrbcs.us-east-1.rds.amazonaws.com:2100/hVRIAPLzTXqE

@@ -1,10 +1,21 @@
 spring:
-  application:
-    name: multitenant-app
   jpa:
-    generate-ddl: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-  datasource:
-    url: jdbc:postgresql://localhost:5433/my_db
-    username: postgres
-    password: postgres
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  profiles:
+    active: local
+  jackson:
+    default-property-inclusion: non_null
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+multitenant:
+  defaultTenant: public
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans,health,httptrace
