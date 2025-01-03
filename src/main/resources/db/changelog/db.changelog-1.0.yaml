@@ -2,6 +2,8 @@ databaseChangeLog:
   - changeSet:
       id: 1
       author: pavel.malinouski
+      validCheckSum:
+        - ANY
       changes:
         - preConditions:
             not:
