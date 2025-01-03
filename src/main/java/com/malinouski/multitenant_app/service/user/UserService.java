@@ -1,4 +1,4 @@
-package com.malinouski.multitenant_app.service;
+package com.malinouski.multitenant_app.service.user;
 
 import com.malinouski.multitenant_app.dto.UserRequest;
 import com.malinouski.multitenant_app.dto.UserResponse;

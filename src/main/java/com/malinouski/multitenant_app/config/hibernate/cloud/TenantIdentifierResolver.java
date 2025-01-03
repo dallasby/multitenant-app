@@ -1,5 +1,4 @@
-package com.malinouski.multitenant_app.config.hibernate;
-
+package com.malinouski.multitenant_app.config.hibernate.cloud;
 
 import com.sap.cloud.sdk.cloudplatform.tenant.exception.TenantAccessException;
 import com.sap.cloud.security.xsuaa.token.AuthenticationToken;
@@ -12,8 +11,9 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 import java.util.Objects;
 
-@Component
+
 @Slf4j
+@Component
 public class TenantIdentifierResolver implements CurrentTenantIdentifierResolver<String> {
     @Value("${multitenant.defaultTenant}")
     String defaultTenant;
@@ -41,16 +41,6 @@ public class TenantIdentifierResolver implements CurrentTenantIdentifierResolver
     private static boolean isValidTenant(String tenant) {
         return Objects.nonNull(tenant) && !Objects.equals("sap-provisioning", tenant);
     }
-
-//    @Override
-//    public String resolveCurrentTenantIdentifier() {
-//        try {
-//            return TenantAccessor.getCurrentTenant().getTenantId();
-//        } catch (TenantAccessException e) {
-//            log.warn("Tenant not found", e);
-//            return defaultTenant;
-//        }
-//    }
 
     @Override
     public boolean validateExistingCurrentSessions() {

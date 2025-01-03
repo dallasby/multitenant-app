@@ -1,4 +1,4 @@
-package com.malinouski.multitenant_app.controller;
+package com.malinouski.multitenant_app.controller.main;
 
 import com.malinouski.multitenant_app.exception.NotAuthorizedException;
 import com.sap.cloud.security.xsuaa.token.Token;
@@ -18,7 +18,6 @@ public class MainController {
         if (!token.getAuthorities().contains(new SimpleGrantedAuthority("Display"))) {
             throw new NotAuthorizedException("This operation requires \"Display\" scope");
         }
-
         return new ResponseEntity<>("Hello World!", HttpStatus.OK);
     }
 }

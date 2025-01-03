@@ -1,4 +1,4 @@
-package com.malinouski.multitenant_app.config.hibernate;
+package com.malinouski.multitenant_app.config.hibernate.cloud;
 
 
 import com.malinouski.multitenant_app.util.TenantUtil;
@@ -36,8 +36,7 @@ public class SchemaPerTenantConnectionProvider implements MultiTenantConnectionP
         try {
             connection.setSchema(TenantUtil.createSchemaName(tenantIdentifier));
         } catch (SQLException e) {
-            throw new HibernateException("Could not alter JDBC connection to specified schema [" + tenantIdentifier + "]",
-                    e);
+            throw new HibernateException("Could not alter JDBC connection to specified schema [" + tenantIdentifier + "]", e);
         }
         return connection;
     }
@@ -47,8 +46,7 @@ public class SchemaPerTenantConnectionProvider implements MultiTenantConnectionP
         try {
             connection.setSchema(TenantUtil.createSchemaName(defaultTenant));
         } catch (SQLException e) {
-            throw new HibernateException("Could not alter JDBC connection to specified schema [" + tenantIdentifier + "]",
-                    e);
+            throw new HibernateException("Could not alter JDBC connection to specified schema [" + tenantIdentifier + "]", e);
         }
         connection.close();
     }

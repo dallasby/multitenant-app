@@ -1,9 +1,9 @@
-package com.malinouski.multitenant_app.service.impl;
+package com.malinouski.multitenant_app.service.user.impl;
 
 import com.malinouski.multitenant_app.dto.UserRequest;
 import com.malinouski.multitenant_app.dto.UserResponse;
 import com.malinouski.multitenant_app.repository.UserRepository;
-import com.malinouski.multitenant_app.service.UserService;
+import com.malinouski.multitenant_app.service.user.UserService;
 import com.malinouski.multitenant_app.util.UserMapper;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserResponse> getAllUsers() {
-        log.info("Get all users");
+        log.info("Getting all users");
         List<UserResponse> userResponses = new ArrayList<>();
         userRepository.findAll().forEach(user -> userResponses.add(userMapper.toUserResponse(user)));
         return userResponses;

@@ -15,7 +15,6 @@ import lombok.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial", updatable = false, nullable = false, insertable = false)
     private Long id;
 
     @Column(nullable = false, length = 100)

@@ -1,4 +1,4 @@
-package com.malinouski.multitenant_app.config.hibernate;
+package com.malinouski.multitenant_app.config.hibernate.cloud;
 
 import com.malinouski.multitenant_app.MultitenantAppApplication;
 import org.hibernate.cfg.Environment;
@@ -31,7 +31,6 @@ public class HibernateConfig {
         em.setJpaVendorAdapter(this.jpaVendorAdapter());
 
         final Map<String, Object> jpaProperties = new HashMap<>();
-//        jpaProperties.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
         jpaProperties.put(Environment.MULTI_TENANT_CONNECTION_PROVIDER, multiTenantConnectionProvider);
         jpaProperties.put(Environment.MULTI_TENANT_IDENTIFIER_RESOLVER, tenantIdentifierResolver);
         jpaProperties.put(Environment.FORMAT_SQL, true);

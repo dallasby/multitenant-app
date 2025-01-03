@@ -1,8 +1,8 @@
-package com.malinouski.multitenant_app.controller;
+package com.malinouski.multitenant_app.controller.user;
 
 import com.malinouski.multitenant_app.dto.UserRequest;
 import com.malinouski.multitenant_app.dto.UserResponse;
-import com.malinouski.multitenant_app.service.UserService;
+import com.malinouski.multitenant_app.service.user.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

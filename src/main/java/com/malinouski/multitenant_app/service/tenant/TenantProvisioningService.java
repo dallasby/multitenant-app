@@ -1,4 +1,4 @@
-package com.malinouski.multitenant_app.service;
+package com.malinouski.multitenant_app.service.tenant;
 
 public interface TenantProvisioningService {
     void subscribeTenant(String tenantId);

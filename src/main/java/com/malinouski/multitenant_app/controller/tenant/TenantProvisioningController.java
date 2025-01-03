@@ -1,7 +1,7 @@
-package com.malinouski.multitenant_app.controller;
+package com.malinouski.multitenant_app.controller.tenant;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.malinouski.multitenant_app.service.TenantProvisioningService;
+import com.malinouski.multitenant_app.service.tenant.TenantProvisioningService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
