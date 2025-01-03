@@ -3,12 +3,17 @@ databaseChangeLog:
       id: 1
       author: pavel.malinouski
       changes:
+        - preConditions:
+            not:
+              tableExists:
+                tableName: users
         - createTable:
             tableName: users
             columns:
               - column:
                   name: id
-                  type: SERIAL
+                  type: BIGINT
+                  autoIncrement: true
                   constraints:
                     nullable: false
                     primaryKey: true

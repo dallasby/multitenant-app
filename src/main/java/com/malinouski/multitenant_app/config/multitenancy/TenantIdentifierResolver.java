@@ -1,4 +1,4 @@
-package com.malinouski.multitenant_app.config.hibernate.cloud;
+package com.malinouski.multitenant_app.config.multitenancy;
 
 import com.sap.cloud.sdk.cloudplatform.tenant.exception.TenantAccessException;
 import com.sap.cloud.security.xsuaa.token.AuthenticationToken;

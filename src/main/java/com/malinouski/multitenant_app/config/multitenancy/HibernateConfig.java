@@ -1,4 +1,4 @@
-package com.malinouski.multitenant_app.config.hibernate.cloud;
+package com.malinouski.multitenant_app.config.multitenancy;
 
 import com.malinouski.multitenant_app.MultitenantAppApplication;
 import org.hibernate.cfg.Environment;
