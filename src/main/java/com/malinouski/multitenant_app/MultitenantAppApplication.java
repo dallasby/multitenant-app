@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
 public class MultitenantAppApplication {
@@ -17,6 +18,7 @@ public class MultitenantAppApplication {
 
     // Used only for test purpose of a destination service
     @Bean
+    @Profile("local")
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
             BitcoinPriceChecker checker = ctx.getBean(BitcoinPriceChecker.class);
