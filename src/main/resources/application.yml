@@ -5,7 +5,7 @@ spring:
     hibernate:
       ddl-auto: update
   profiles:
-    active: local
+    active: cloud
   jackson:
     default-property-inclusion: non_null
   liquibase:
@@ -19,3 +19,5 @@ management:
     web:
       exposure:
         include: beans,health,httptrace
+
+BTP_ENV: BTP

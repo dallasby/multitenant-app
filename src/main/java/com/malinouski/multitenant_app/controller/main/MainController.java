@@ -18,6 +18,6 @@ public class MainController {
         if (!token.getAuthorities().contains(new SimpleGrantedAuthority("Display"))) {
             throw new NotAuthorizedException("This operation requires \"Display\" scope");
         }
-        return new ResponseEntity<>("Hello World!", HttpStatus.OK);
+        return new ResponseEntity<>("Welcome to the MTA!", HttpStatus.OK);
     }
 }

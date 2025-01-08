@@ -1,9 +1,87 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Java Tutorial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multitenant App - Welcome</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #e0eafc, #cfdef3); /* Subtle gradient background */
+            color: #333; /* Darker text for better contrast */
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white header */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        h1 {
+            color: #0056b3; /* Blue heading */
+            margin-bottom: 10px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque container */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+            font-size: 1.2em;
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
 </head>
 <body>
-<h1>Java Tutorial</h1>
-<a href="/multitenant-app/">My Multitenant Application</a>
+
+<header>
+    <h1>Welcome to the Multitenant App!</h1>
+</header>
+
+<main>
+    <div class="container">
+        <p>Explore simple Spring app with destination service and basic CRUD operations.</p>
+        <a href="/multitenant-app/">Explore the Multitenant Application</a>
+    </div>
+</main>
+
+<footer>
+    &copy; 2025 Pavel Malinouski SAP Tutorial. All rights reserved.
+</footer>
+
 </body>
 </html>
