@@ -1,21 +1,26 @@
----
 applications:
+  # Settings for Application
   - name: multitenant-app
-    random-route: true
     path: ./target/multitenant-app-0.0.1-SNAPSHOT.jar
     memory: 1024M
-    buildpacks:
-      - sap_java_buildpack_jakarta
+    buildpack: sap_java_buildpack_jakarta
+    routes:
+      - route: multitenant-app-stellar-bear-sj.cfapps.us10-001.hana.ondemand.com
     env:
-      TARGET_RUNTIME: tomcat
-      JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
-      JBP_CONFIG_SAP_MACHINE_JDK: "{ version: 21.+ }"
+      SPRING_PROFILES_ACTIVE: cloud
+      SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"sap-provisioning"}]'
+      JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jre.SAPMachineJRE']"
+      JBP_CONFIG_DEBUG: '{enabled: true}'
+      BTP_ENV: BTP
     services:
       - javauaa
       - my_db
       - saas-registry
+
+  # Settings for Router
   - name: web
-    random-route: true
+    routes:
+      - route: web-noisy-baboon-pa.cfapps.us10-001.hana.ondemand.com
     path: web
     memory: 1024M
     env:
