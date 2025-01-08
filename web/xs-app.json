@@ -1,9 +1,11 @@
 {
+  "authenticationMethod": "route",
   "routes": [
     {
       "source": "^/multitenant-app/(.*)$",
       "target": "$1",
-      "destination": "multitenant-app"
+      "destination": "multitenant-app",
+      "authenticationType": "xsuaa"
     }
   ]
 }
